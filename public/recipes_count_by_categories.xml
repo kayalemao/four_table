@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chart caption="Recipes Count by Category">
+  <set label="Sweet" value="3"/>
+  <set label="Sour" value="3"/>
+  <set label="Hot" value="9"/>
+  <set label="Spicy" value="4"/>
+  <set label="Salad" value="2"/>
+  <set label="Salty" value="3"/>
+</chart>

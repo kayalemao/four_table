@@ -1,0 +1,25 @@
+<index-page>
+	<collection: replace>
+		<div>
+			<table-plus fields="this, categories.count, categories, country">
+			<controls:>
+				<transition-buttons/>
+			</controls:>
+			</table-plus>
+		</div>
+	</collection:>
+	<after-content:>
+		<div id='recipes_count_by_countries'>
+		</div>
+		<div id='recipes_count_by_categories'>
+		</div>
+		<script>
+			var chart_recipes_by_countries = new FusionCharts('http://localhost:3000/FusionCharts/Bar2D.swf', 'Recipes_Countries_Chart', '1000', '400');
+			chart_recipes_by_countries.setDataURL('http://localhost:3000/recipes_count_by_countries.xml');
+			chart_recipes_by_countries.render('recipes_count_by_countries');
+			var chart_recipes_by_categories = new FusionCharts('http://localhost:3000/FusionCharts/Pie3D.swf', 'Recipes_Categories_Chart', '1000', '400');
+			chart_recipes_by_categories.setDataURL('http://localhost:3000/recipes_count_by_categories.xml');
+			chart_recipes_by_categories.render('recipes_count_by_categories');
+		</script>
+	</after-content:>
+</index-page>

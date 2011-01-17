@@ -1,0 +1,74 @@
+<def tag="messages">
+	<br/><br/>
+	<ul>
+		<li param="msg1">Message 1</li>
+		<li param="msg2">Message 2</li>
+		<li param="msg3">Message 3</li>
+	</ul>
+</def>
+
+
+<def tag="more-messages">
+	<br/><br/>
+	<li param="msg0">Message 0</li>
+	<messages merge>
+		<msg2: param>Message 2 Changed in merge.</msg2:>
+	</messages>
+	<li param="msg4">Message 4</li>
+	<li>No Parameter Here</li>
+</def>
+
+
+<def tag="bd-it">
+	<br/>
+	<b><i><span param="default">stuff</span></i></b>
+</def>
+
+<page title="Home">
+
+  <body: class="front-page"/>
+
+  <content:>
+    <header class="content-header">
+      <h1>Welcome to <app-name/></h1>
+      <section class="welcome-message">
+        <h3>Congratulations! Your Hobo Rails App is up and running</h3>
+        <br/><h4>
+        <a to="&Country" action="index" >List My Countries</a><br/>
+        <br/><a to="&Country" action="new" >Add new Country</a><br/>
+        </h4>
+		<messages>
+			<msg2:>This is the second message</msg2:>
+			<msg1:>This is the first message </msg1:>
+			<msg3:>This is the third message</msg3:>
+        </messages>
+<!--
+        <messagex/>
+-->
+        <bd-it/>
+        <bd-it>More stuff</bd-it>
+        <more-messages>
+			<msg0:> Message 0 changed with parameter tag.</msg0:>
+			<msg4:> Message 4 has changed with parameter tag too.</msg4:>
+		</more-messages>
+        
+        <ul>
+          <li>To customise this page: edit app/views/front/index.dryml</li>
+        </ul>
+    
+        <% if User.count == 0 -%>
+          <h3 style="margin-top: 20px;">There are no user accounts - please provide the details of the site administrator</h3>
+          <do with="&User.new"><% this.exempt_from_edit_checks = true %>
+            <signup-form/>
+          </do>
+        <% end -%>
+        
+      
+      </section>
+    </header>
+
+    <section class="content-body">
+    </section>
+  </content:>
+  
+</page>

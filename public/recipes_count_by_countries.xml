@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chart caption="Recipes Count by Country">
+  <set label="American" value="3"/>
+  <set label="French" value="1"/>
+  <set label="Brazilian" value="1"/>
+  <set label="Italy" value="5"/>
+  <set label="Uruguay" value="2"/>
+  <set label="Mexiko" value="3"/>
+  <set label="Hungary" value="1"/>
+</chart>

@@ -1,0 +1,11 @@
+<!--
+<show-page>
+	<collection-heading:></collection-heading:>
+	<field-list: fields = "body, country, categories">
+		<body-label:>Recipe</body-label:>
+		<country-label:>Origin</country-label:>
+		<categories-label:>Flavors</categories-label>
+	</field-list>
+</show-page>
+-->
+<show-page-new/>
